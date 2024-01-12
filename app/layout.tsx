@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import localFont from 'next/font/local'
+import Header from '@/components/header'
 
 const avenir = localFont({
   src: [
@@ -66,8 +67,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning={true} className={`${avenir.className} font-medium bg-zinc-100 text-zinc-950` }>
-        
+      <body suppressHydrationWarning={true} className={`${avenir.className} font-medium text-[#161716] bg-[#EAF0EA]` }>
+        <Header />
         {children}
       </body>
     </html>
