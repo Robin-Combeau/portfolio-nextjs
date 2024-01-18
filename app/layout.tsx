@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import localFont from 'next/font/local'
+
 import Header from '@/components/header'
+
 
 const avenir = localFont({
   src: [
@@ -53,7 +54,6 @@ const avenir = localFont({
     }
   ],
 })
-
 
 export const metadata: Metadata = {
   title: 'Robin Combeau | Portfolio',

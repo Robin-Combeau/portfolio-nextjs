@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.diagonal-line-pattern {
+    background: repeating-linear-gradient(45deg, #e0e0e0, #e0e0e0 3px, white 3px, white 16px);
+}
