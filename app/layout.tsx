@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import localFont from 'next/font/local'
-
-import Header from '@/components/header'
+import Header from '@/components/page/Header'
 
 
 const avenir = localFont({

@@ -16,7 +16,7 @@ export default function Header() {
       ></motion.div>
 
       <nav className="flex fixed top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-base sm:w-[initial] sm:flex-nowrap sm:gap-[0.35em]">
+        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-base sm:w-[initial] sm:flex-nowrap sm:gap-[0.35em] ">
           {links.map((link) =>
             <motion.li
               className="h-3/4 flex items-center justify-center relative font-semibold whitespace-nowrap text-base"
@@ -35,11 +35,11 @@ export default function Header() {
         </ul>
       </nav>
       <motion.div
-        className="flex fixed top-[0.15rem] right-20 h-12 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0"
-        initial={{ y: -100, opacity: 0 }}
+        className="flex fixed top-[0.15rem] right-5 lg:right-20 py-2 sm:top-[1.7rem] sm:py-0 flex-col lg:flex-row"
+        initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <button className="flex w-full items-center justify-center mx-2 p-1.5 py-1.5 transition font-bold border-2 border-[#161716] rounded-full">EN</button>
-        <button className="flex w-full items-center justify-center mx-2 px-1.5 py-1.5 transition font-bold border-2 border-[#161716] rounded-full"><IoMdMoon size={24} /></button>
+        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 mx-2 p-1.5 py-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full mb-2 lg:mb-0">EN</button>
+        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 mx-2 px-1.5 py-1.5 transition text-sm lg:text-base  font-bold border-2 border-[#161716] rounded-full"><IoMdMoon size={24} /></button>
       </motion.div>
     </header>
   )
