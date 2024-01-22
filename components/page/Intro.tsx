@@ -21,10 +21,10 @@ export default function Intro() {
   return (
     <section id="intro" className="mb-28 sm:mb-4">
       <motion.div
-        className="flex items-center justify-center mb-28 sm:mb-8"
+        className="flex mb-28 sm:mb-8 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-2xl font-medium px-6 py-4 pr-14 rounded-xl sm:mx-4 sm:w-[31rem] sm:h-[13rem]">
+        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-8 lg:mx-4 lg:w-[31rem] h-auto lg:h-[13rem]">
           <span>Je m'appelle </span>
           <span className="font-bold">Robin</span>
           <span>. Je suis </span>
@@ -34,7 +34,7 @@ export default function Intro() {
           <br /><br />
           Mes domaines de prédilection sont <span className="font-bold">PHP (Laravel)</span> et <span className="font-bold">Javascript (React.js)</span>.
         </div>
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern sm:mx-4 sm:w-[25rem] sm:h-[13rem] ">
+        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[25rem] lg:h-[13rem] hidden lg:block">
           <code className={`${code.className} tracking-tighter`}>
             {selectedLanguage === 'Javascript' ? (
               <span>
