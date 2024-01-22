@@ -8,49 +8,64 @@ import Header from '@/components/header'
 const avenir = localFont({
   src: [
     {
-      path: '../public/fonts/Avenir-Book.ttf',
-      weight: '300',
+      path: '../public/fonts/avenir/AvenirNextLTPro-UltLt.otf',
+      weight: '200',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Avenir-BookOblique.ttf',
-      weight: '300',
+      path: '../public/fonts/avenir/AvenirNextLTPro-UltLtIt.otf',
+      weight: '200',
       style: 'italic',
     },
     {
-      path: '../public/fonts/Avenir-Roman.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-Regular.otf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Avenir-Oblique.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-It.otf',
       weight: '400',
       style: 'italic',
     },
     {
-      path: '../public/fonts/Avenir-Medium.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-Medium.otf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Avenir-MediumOblique.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-MediumIt.otf',
       weight: '500',
       style: 'italic',
     },
     {
-      path: '../public/fonts/Avenir-Heavy.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-Demi.otf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../public/fonts/avenir/AvenirNextLTPro-DemiIt.otf',
+      weight: '600',
+      style: 'italic',
+    },
+    {
+      path: '../public/fonts/avenir/AvenirNextLTPro-Bold.otf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../public/fonts/Avenir-HeavyOblique.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-BoldIt.otf',
       weight: '700',
       style: 'italic',
     },
     {
-      path: '../public/fonts/Avenir-Black.ttf',
+      path: '../public/fonts/avenir/AvenirNextLTPro-Heavy.otf',
       weight: '900',
       style: 'normal',
+    },
+    {
+      path: '../public/fonts/avenir/AvenirNextLTPro-HeavyIt.otf',
+      weight: '900',
+      style: 'italic',
     }
   ],
 })
