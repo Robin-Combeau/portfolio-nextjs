@@ -24,7 +24,7 @@ export default function Intro() {
         className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-8 lg:mx-4 lg:w-[31rem] h-auto lg:h-[13rem]">
+        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[31rem] h-auto lg:h-[13rem]">
           <span>Je m'appelle </span>
           <span className="font-bold">Robin</span>
           <span>. Je suis </span>

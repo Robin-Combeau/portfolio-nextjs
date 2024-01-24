@@ -36,20 +36,20 @@ const Skills = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="border-2 border-[#161716] border-b-[8px] bg-[#ECB5A3] text-xl lg:text-xl font-medium px-8 py-6 pr-14 rounded-xl mx-8 lg:mx-4 lg:w-[38rem] h-auto lg:h-[20rem]">
-          <h1 className="font-bold mb-6 text-3xl">Compétences</h1>
+        <div className="border-2 border-[#161716] border-b-[8px] bg-[#ECB5A3] text-lg lg:text-xl font-medium px-8 py-6 pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[38rem] h-auto lg:h-[20rem]">
+          <h1 className="font-bold mb-6 text-2xl">Compétences</h1>
           <ul className="flex flex-col">
             {skills.map((level) => (
               <motion.li
                 key={level.name}
-                className="flex mb-2"
+                className="flex mb-2 sm:mb-1"
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >
-                <span className="font-bold min-w-[10rem]">{level.name}</span>{" "}
+                <span className="font-bold text-base min-w-[7rem] lg:min-w-[10rem]">{level.name}</span>{" "}
                 <span className="flex flex-wrap">
                   {level.list.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="text-lg font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-3 py-1 m-0.5 rounded-lg">
+                    <span key={skillIndex} className="text-sm font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-3 py-1 lg:px-2 lg:py-0.5 m-0.5 lg:m-0.5 rounded-lg">
                       {skill}
                     </span>
                   ))}
