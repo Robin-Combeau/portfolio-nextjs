@@ -46,10 +46,10 @@ const Skills = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
               >
-                <span className="font-bold text-base min-w-[7rem] lg:min-w-[10rem]">{level.name}</span>{" "}
+                <span className="font-bold text-base lg:text-lg min-w-[7rem] lg:min-w-[10rem]">{level.name}</span>{" "}
                 <span className="flex flex-wrap">
                   {level.list.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="text-sm font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-3 py-1 lg:px-2 lg:py-0.5 m-0.5 lg:m-0.5 rounded-lg">
+                    <span key={skillIndex} className="text-sm lg:text-lg font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-3 py-1 lg:px-2 lg:py-0.5 m-0.5 lg:m-0.5 rounded-lg">
                       {skill}
                     </span>
                   ))}
