@@ -11,7 +11,7 @@ interface LinkButtonProps {
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({ href, download, content, borderColor = 'border-[#161716]', backgroundColor = 'bg-[#EAF0EA]', hoverBackgroundColor = 'hover:bg-[#6A8A5D]', }) => {
-  const buttonClassName = `border-2 ${borderColor} border-b-[6px] ${backgroundColor} px-7 py-3 flex items-center gap-2 rounded-xl outline-none ${hoverBackgroundColor} transition`;
+  const buttonClassName = `border-2 ${borderColor} border-b-[6px] ${backgroundColor} px-7 py-3 flex items-center text-center gap-2 rounded-xl outline-none ${hoverBackgroundColor} transition`;
 
   if (download) {
     return (
