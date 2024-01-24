@@ -19,7 +19,6 @@ const Skills = () => {
   const levels = skills.map((level) => level.value);
   const items = skills.map((level) => level.list);
 
-  // Function to generate the class summary
   const generateCodeBlock = () => {
     const classLevels = levels.map((level, index) => {
       const skillList = items[index].map((skill) => `"${skill}"`);
@@ -36,29 +35,24 @@ const Skills = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="border-2 border-[#161716] border-b-[8px] bg-[#ECB5A3] text-lg lg:text-xl font-medium px-8 py-6 pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[38rem] h-auto lg:h-[20rem]">
+        <div className="border-2 border-[#161716] border-b-[8px] bg-[#ECB5A3] text-lg lg:text-xl font-medium px-6 py-4 lg:px-8 lg:py-6 lg:pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[38rem] h-auto lg:h-[19rem]">
           <h1 className="font-bold mb-6 text-2xl">Compétences</h1>
           <ul className="flex flex-col">
             {skills.map((level) => (
-              <motion.li
-                key={level.name}
-                className="flex mb-2 sm:mb-1"
-                initial={{ y: -100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-              >
-                <span className="font-bold text-base lg:text-lg min-w-[7rem] lg:min-w-[10rem]">{level.name}</span>{" "}
+              <li key={level.name} className="flex mb-2 sm:mb-1">
+                <span className="font-bold text-base lg:text-lg min-w-[4.8rem] lg:min-w-[7rem]">{level.name}</span>{" "}
                 <span className="flex flex-wrap">
                   {level.list.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="text-sm lg:text-lg font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-3 py-1 lg:px-2 lg:py-0.5 m-0.5 lg:m-0.5 rounded-lg">
+                    <span key={skillIndex} className="text-sm lg:text-base font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-2 py-0.5 lg:px-3 lg:py-1 m-0.5 lg:m-0.5 rounded-lg">
                       {skill}
                     </span>
                   ))}
                 </span>
-              </motion.li>
+              </li>
             ))}
           </ul>
         </div>
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:h-[20rem] hidden lg:block">
+        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:h-[19rem] hidden lg:block">
           <code className={`${code.className} tracking-tighter`}>
             {generateCodeBlock()}
           </code>
