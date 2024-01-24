@@ -21,7 +21,7 @@ export default function Intro() {
   return (
     <section id="intro">
       <motion.div
-        className="flex mb-8 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
+        className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
         <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-8 lg:mx-4 lg:w-[31rem] h-auto lg:h-[13rem]">
@@ -70,7 +70,7 @@ export default function Intro() {
       </motion.div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-base font-semibold sm:gap-6"
+        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 mb-10 text-base font-semibold sm:gap-6"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
         <div className="flex gap-6 my-1 sm:my-0 m:gap-6">

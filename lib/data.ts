@@ -26,20 +26,19 @@ export const links = [
 ] as const;
 
 export const skills = [
-  "PHP",
-  "Laravel",
-  "Javascript",
-  "React.js",
-  "Next.js",
-  "jQuery",
-  "CSS",
-  "Tailwind",
-  "HTML",
-  "Zend",
-  "SQL",
-  "Git",
-  "CI/CD",
-  "UI Design",
-  "Figma",
-  "Framer Motion",
+  {
+    name: "Confirmé",
+    value: "confirmed",
+    list: ["PHP", "Laravel", "Javascript", "Git"],
+  },
+  {
+    name: "Intermédiaire",
+    value: "intermediate",
+    list: ["React.js", "Next.js", "Tailwind", "jQuery", "Zend", "UI Design", "Figma"],
+  },
+  {
+    name: "Novice",
+    value: "novice",
+    list: ["Node.js", "CI/CD", "Framer Motion"],
+  }
 ] as const;
