@@ -32,7 +32,7 @@ export const skills = [
     list: ["PHP", "Laravel", "Javascript", "Git"],
   },
   {
-    name: "Moyen",
+    name: "Interméd.",
     value: "intermediate",
     list: ["React.js", "Next.js", "Tailwind", "jQuery", "Zend", "UI Design", "Figma"],
   },

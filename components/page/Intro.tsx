@@ -8,6 +8,7 @@ import { FaDribbble, FaGithub, FaLinkedin } from "react-icons/fa";
 import { Roboto_Mono } from 'next/font/google';
 import SocialButton from '../SocialButton';
 import LinkButton from '../LinkButton';
+import LanguageSelector from '../CodeLanguageSelector';
 
 const code = Roboto_Mono({ subsets: ['latin'] });
 
@@ -58,14 +59,7 @@ export default function Intro() {
               </span>
             )}
           </code>
-          <div className="absolute bottom-2 right-2">
-            <button className={`px-1 py-1 mx-0.5 hover:text-[#161716] transition ${selectedLanguage === 'Javascript' ? 'selected underline' : ''}`} onClick={() => handleLanguageChange('Javascript')}>
-              Javascript
-            </button>
-            <button className={`px-2 py-1 mx-0.5 hover:text-[#161716] transition ${selectedLanguage === 'PHP' ? 'selected underline' : ''}`} onClick={() => handleLanguageChange('PHP')}>
-              PHP
-            </button>
-          </div>
+          <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
         </div>
       </motion.div>
 
