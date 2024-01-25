@@ -7,6 +7,7 @@ import { skills } from "@/lib/data";
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
+import Skill from '../Skill';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 const Skills = () => {
@@ -54,9 +55,8 @@ const Skills = () => {
                   <span className="font-bold text-base lg:text-lg min-w-[4.8rem] lg:min-w-[7rem]">{level.name}</span>{" "}
                   <span className="flex flex-wrap mt-[-5px]">
                     {level.list.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="text-sm lg:text-base font-base border-2 border-[#161716] border-b-[4px] bg-[#EAF0EA] px-2 py-0.5 lg:px-3 lg:py-1 m-0.5 lg:m-0.5 rounded-lg">
-                        {skill}
-                      </span>
+                      // <Skill skillIndex={skillIndex} skill={skill}/>
+                      <Skill key={skillIndex} skill={skill} />
                     ))}
                   </span>
                 </li>
