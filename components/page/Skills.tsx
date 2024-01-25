@@ -44,9 +44,9 @@ const Skills = () => {
       >
         <Section
           title="Compétences"
-          lgWidth="[38rem]"
-          lgHeight="[19rem]"
-          bgColor="[#ECB5A3]"
+          lgWidth="lg:w-[38rem]"
+          lgHeight="lg:h-[19rem]"
+          bgColor="bg-[#ECB5A3]"
           content={
             <ul className="flex flex-col">
               {skills.map((level) => (

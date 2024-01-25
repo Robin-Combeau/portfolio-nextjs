@@ -55,9 +55,9 @@ const About = () => {
 
         <Section
           title="À propos"
-          lgWidth="[38rem]"
-          lgHeight="[21rem]"
-          bgColor="[#A8C9A0]"
+          lgWidth="lg:w-[38rem]"
+          lgHeight="lg:h-[21rem]"
+          bgColor="bg-[#A8C9A0]"
           content={
             <div className="flex flex-col text-sm break-words">
               <span className="mb-3 break-words">Après mon diplôme d'ingénieur en agronomie spécialisé dans les nouvelles technologies, j'ai décidé de poursuivre ma passion grandissante pour la programmation. Après une POEI, j'ai commencé à développeur fullstack et cela fait plus de 4 ans aujourd'hui.</span>
