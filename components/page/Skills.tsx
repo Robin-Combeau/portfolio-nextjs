@@ -46,7 +46,6 @@ const Skills = () => {
         <Section
           title="Compétences"
           lgWidth="lg:w-[38rem]"
-          lgHeight="lg:h-[18rem]"
           bgColor="bg-[#ECB5A3]"
           content={
             <ul className="flex flex-col">

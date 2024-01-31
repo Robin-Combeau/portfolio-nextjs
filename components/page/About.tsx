@@ -18,9 +18,6 @@ const About = () => {
     setSelectedLanguage(language);
   };
 
-  const levels = skills.map((level) => level.value);
-  const items = skills.map((level) => level.list);
-
   return (
     <section id="about">
       <motion.div

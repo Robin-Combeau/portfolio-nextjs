@@ -19,7 +19,6 @@ const Projects = () => {
         <Section
           title="Projets"
           lgWidth="lg:w-[58rem]"
-          lgHeight="lg:h-auto"
           bgColor="bg-[#ECB5A3]"
           content={
             <div className="flex flex-wrap justify-center">
