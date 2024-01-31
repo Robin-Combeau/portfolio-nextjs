@@ -25,7 +25,7 @@ export default function Intro() {
         className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[31rem] h-auto lg:self-stretch">
+        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[31rem] h-auto lg:self-stretch 2xl:w-[42rem]">
           <span>Je m'appelle </span>
           <span className="font-bold">Robin</span>
           <span>. Je suis </span>
@@ -35,7 +35,7 @@ export default function Intro() {
           <br /><br />
           Mes domaines de prédilection sont <span className="font-bold">PHP (Laravel)</span> et <span className="font-bold">Javascript (React.js)</span>.
         </div>
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[25rem] lg:self-stretch hidden lg:block">
+        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[25rem] lg:self-stretch hidden lg:block 2xl:w-[30rem]">
           <code className={`${code.className} tracking-tighter`}>
             {selectedLanguage === 'Javascript' ? (
               <span>
