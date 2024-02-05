@@ -45,14 +45,14 @@ export const skills = [
 
 export const experiences = [
   {
-    year: 2014,
-    name: "DUT Génie Biologique",
-    description: "Spécialisé en génie de l'environnement",
+    year: 2023,
+    name: "Septeo",
+    description: "Développeur web Laravel / VueJS / PHP natif",
   },
   {
-    year: 2018,
-    name: "Diplôme d'ingénieur en agronomie",
-    description: "Spécialisé en TIC (Technologies de l'Information et de la Communication)",
+    year: 2019,
+    name: "Sopra Steria",
+    description: "Ingénieur en développement web sur des projets PHP et/ou Javascript",
   },
   {
     year: 2019,
@@ -60,14 +60,13 @@ export const experiences = [
     description: "Design et marketing (Print / UI design, Wordpress, Réseaux sociaux...)",
   },
   {
-    year: 2020,
-    name: "Sopra Steria",
-    description: "Ingénieur en développement web sur des projets PHP et/ou Javascript",
+    year: 2018,
+    name: "Diplôme d'ingénieur en agronomie",
+    description: "Spécialisé en TIC (Technologies de l'Information et de la Communication)",
   },
   {
-    year: 2023,
-    name: "Septeo",
-    description: "Développeur web Laravel / VueJS / PHP natif",
-  },
-
+    year: 2014,
+    name: "DUT Génie Biologique",
+    description: "Spécialisé en génie de l'environnement",
+  }
 ] as const;

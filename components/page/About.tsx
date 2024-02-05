@@ -25,7 +25,7 @@ const About = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:h-[23rem] hidden lg:block">
+        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:self-stretch 2xl:w-[23rem] hidden lg:block">
           <code className={`${code.className} tracking-tighter`}>
             {selectedLanguage === 'Javascript' ? (
               <span>
@@ -53,7 +53,7 @@ const About = () => {
         <Section
           title="À propos"
           lgWidth="lg:w-[38rem]"
-          lgHeight="lg:h-[23rem]"
+          xxlWidth="2xl:w-[49rem]"
           bgColor="bg-[#A8C9A0]"
           content={
             <div className="flex flex-col text-sm break-words">

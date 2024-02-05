@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import Section from '../Section'
 import Skill from '../Skill'
-import hearthdleLogo from '../../public/images/hearthdle_logo.webp';
+
 import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from "react-icons/fi";
 
@@ -19,6 +19,7 @@ const Projects = () => {
         <Section
           title="Projets"
           lgWidth="lg:w-[58rem]"
+          xxlWidth="2xl:w-[74rem]"
           bgColor="bg-[#ECB5A3]"
           content={
             <div className="flex flex-wrap justify-center">
@@ -27,12 +28,12 @@ const Projects = () => {
                 <div className="lg:w-[auto] relative z-10">
                   <div className="flex items-center mb-2">
                     <h2 className="font-bold mb-2 mr-2 text-xl">Hearthdle</h2>
-                    <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="http://github.com" target="_blank">
+                    <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="https://github.com/Robin-Combeau/hearthdle-proje" target="_blank">
                       <FaGithub size={24} className='' />
                     </a>
-                    <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="http://github.com" target="_blank">
+{/*                     <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="http://github.com" target="_blank">
                       <FiExternalLink size={24} className='' />
-                    </a>
+                    </a> */}
                   </div>
 
                   <div className="flex flex-col text-sm break-words">
@@ -51,7 +52,7 @@ const Projects = () => {
                 <div className="lg:w-[auto] relative z-10">
                   <div className="flex items-center mb-2">
                     <h2 className="font-bold mb-2 mr-2 text-xl">Ce portfolio</h2>
-                    <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="http://github.com" target="_blank">
+                    <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="https://github.com/Robin-Combeau/portfolio-nextjs" target="_blank">
                       <FaGithub size={24} className='' />
                     </a>
                   </div>
