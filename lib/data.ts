@@ -70,3 +70,23 @@ export const experiences = [
     description: "Spécialisé en génie de l'environnement",
   }
 ] as const;
+
+export const codeBlocks = [
+  {
+    className: "Person",
+    name: '"Robin Combeau"',
+    languages: '["Javascript", "PHP"]',
+    age: '1994'
+  },
+  {
+    className: "About",
+    education: '"Ingénieur"',
+    hobbies: '["Code", "Volley-ball", "Musique", "Jeux"]'
+  },
+  {
+    className: "Experiences",
+    education: '["Montpellier SupAgro", "IUT de la Réunion"]',
+    companies: '["Septeo", "Sopra Steria", "Hiphen"]',
+    yearsOfExperience: '2019'
+  },
+] as const;

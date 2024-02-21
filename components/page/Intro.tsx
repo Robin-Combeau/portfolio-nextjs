@@ -9,6 +9,7 @@ import { Roboto_Mono } from 'next/font/google';
 import SocialButton from '../SocialButton';
 import LinkButton from '../LinkButton';
 import LanguageSelector from '../CodeLanguageSelector';
+import CodeBlock from '../CodeBlock';
 
 const code = Roboto_Mono({ subsets: ['latin'] });
 
@@ -36,29 +37,7 @@ export default function Intro() {
           Mes domaines de prédilection sont <span className="font-bold">PHP (Laravel)</span> et <span className="font-bold">Javascript (React.js)</span>.
         </div>
         <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[25rem] lg:self-stretch hidden lg:block 2xl:w-[30rem]">
-          <code className={`${code.className} tracking-tighter`}>
-            {selectedLanguage === 'Javascript' ? (
-              <span>
-                class Person {'{'}
-                {'\n  '}constructor() {'{'}
-                {'\n    '}this.name = "<span className="font-bold underline">Robin Combeau</span>";
-                {'\n    '}this.languages = ["<span className="font-bold underline">Javascript</span>", "<span className="font-bold underline">PHP</span>"];
-                {'\n    '}this.age = new Date().getFullYear() - 1994;
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            ) : (
-              <span>
-                class Person {'{'}
-                {'\n  '}public function __construct() {'{'}
-                {'\n    '}$this-{'>'}name = "<span className="font-bold underline">Robin Combeau</span>";
-                {'\n    '}$this-{'>'}languages = ["<span className="font-bold underline">Javascript</span>", "<span className="font-bold underline">PHP</span>"];
-                {'\n    '}$this-{'>'}age = date("Y") - 1994;
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            )}
-          </code>
+          <CodeBlock className='Person' selectedLanguage={selectedLanguage} />
           <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
         </div>
       </motion.div>
@@ -83,3 +62,28 @@ export default function Intro() {
     </section>
   )
 }
+
+
+{/* <code className={`${code.className} tracking-tighter`}>
+            {selectedLanguage === 'Javascript' ? (
+              <span>
+                class Person {'{'}
+                {'\n  '}constructor() {'{'}
+                {'\n    '}this.name = "<span className="font-bold underline">Robin Combeau</span>";
+                {'\n    '}this.languages = ["<span className="font-bold underline">Javascript</span>", "<span className="font-bold underline">PHP</span>"];
+                {'\n    '}this.age = new Date().getFullYear() - 1994;
+                {'\n  '}{'}'}
+                {'\n'}{'}'}
+              </span>
+            ) : (
+              <span>
+                class Person {'{'}
+                {'\n  '}public function __construct() {'{'}
+                {'\n    '}$this-{'>'}name = "<span className="font-bold underline">Robin Combeau</span>";
+                {'\n    '}$this-{'>'}languages = ["<span className="font-bold underline">Javascript</span>", "<span className="font-bold underline">PHP</span>"];
+                {'\n    '}$this-{'>'}age = date("Y") - 1994;
+                {'\n  '}{'}'}
+                {'\n'}{'}'}
+              </span>
+            )}
+          </code> */}

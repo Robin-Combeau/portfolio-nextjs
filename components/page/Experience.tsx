@@ -7,6 +7,7 @@ import { experiences } from "@/lib/data";
 import Section from '../Section';
 import LanguageSelector from '../CodeLanguageSelector';
 import { Roboto_Mono } from 'next/font/google'
+import CodeBlock from '../CodeBlock';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 
@@ -45,29 +46,7 @@ const Experience = () => {
         />
         
         <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:self-stretch 2xl:w-[21rem] hidden lg:block">
-          <code className={`${code.className} tracking-tighter`}>
-            {selectedLanguage === 'Javascript' ? (
-              <span>
-                class Experiences {'{'}
-                {'\n  '}constructor() {'{'}
-                {'\n    '}this.education = ["Montpellier SupAgro", "IUT de la Réunion"];
-                {'\n    '}this.companies = ["Septeo", "Sopra Steria", "Hiphen"];
-                {'\n    '}this.experienceAsDeveloper = new Date().getFullYear() - 2019;
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            ) : (
-              <span>
-                class Experiences {'{'}
-                {'\n  '}public function __construct() {'{'}
-                {'\n    '}$this-{'>'}education = ["Montpellier SupAgro", "IUT de la Réunion"];
-                {'\n    '}$this-{'>'}companies = ["Septeo", "Sopra Steria", "Hiphen"];
-                {'\n    '}$this-{'>'}experienceAsDeveloper = date("Y") - 2019;
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            )}
-          </code>
+          <CodeBlock className='Experiences' selectedLanguage={selectedLanguage} />
           <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
         </div>
       </motion.div>

@@ -9,6 +9,7 @@ import { skills } from "@/lib/data";
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
+import CodeBlock from '../CodeBlock';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 const About = () => {
@@ -26,27 +27,7 @@ const About = () => {
         animate={{ y: 0, opacity: 1 }}
       >
         <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:self-stretch 2xl:w-[23rem] hidden lg:block">
-          <code className={`${code.className} tracking-tighter`}>
-            {selectedLanguage === 'Javascript' ? (
-              <span>
-                class About {'{'}
-                {'\n  '}constructor() {'{'}
-                {'\n    '}this.education = "Ingénieur";
-                {'\n    '}this.hobbies = ["Code", "Volley-ball", "Musique", "Jeux"];
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            ) : (
-              <span>
-                class About {'{'}
-                {'\n  '}public function __construct() {'{'}
-                {'\n    '}$this-{'>'}education = "Ingénieur";
-                {'\n    '}$this-{'>'}hobbies = ["Code", "Volley-ball", "Musique", "Jeux"];
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            )}
-          </code>
+          <CodeBlock className='About' selectedLanguage={selectedLanguage} />
           <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
         </div>
 
