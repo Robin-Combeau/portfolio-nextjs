@@ -29,7 +29,7 @@ const About = () => {
       >
         <CodeWrapper
           width="18rem"
-          xxlWidth="23rem"
+          xxlWidth="21rem"
           content={
             <>
               <CodeBlock className='About' selectedLanguage={selectedLanguage} />
@@ -41,7 +41,7 @@ const About = () => {
         <Section
           title="À propos"
           lgWidth="lg:w-[38rem]"
-          xxlWidth="2xl:w-[49rem]"
+          xxlWidth="2xl:w-[51rem]"
           bgColor="bg-[#A8C9A0]"
           content={
             <div className="flex flex-col text-sm break-words">

@@ -29,7 +29,7 @@ const Contact = () => {
       >
         <CodeWrapper
           width="18rem"
-          xxlWidth="23rem"
+          xxlWidth="21rem"
           content={
             <>
               <CodeBlock className='Contact' selectedLanguage={selectedLanguage} />
@@ -41,7 +41,7 @@ const Contact = () => {
         <Section
           title="Contact"
           lgWidth="lg:w-[38rem]"
-          xxlWidth="2xl:w-[49rem]"
+          xxlWidth="2xl:w-[51rem]"
           bgColor="bg-[#ECB5A3]"
           content={
             <form className="flex flex-col text-base">
