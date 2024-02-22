@@ -39,7 +39,7 @@ export const skills = [
   {
     name: "Novice",
     value: "novice",
-    list: ["Svelte", "Next", "Vue"],
+    list: ["Svelte", "Next", "Vue", "Typescript"],
   },
   {
     name: "Notions",
