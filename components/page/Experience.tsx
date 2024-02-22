@@ -9,6 +9,8 @@ import LanguageSelector from '../CodeLanguageSelector';
 import { Roboto_Mono } from 'next/font/google'
 import CodeBlock from '../CodeBlock';
 import CodeWrapper from '../CodeWrapper';
+import { FaGraduationCap } from 'react-icons/fa';
+import { MdWork } from "react-icons/md";
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 
@@ -35,6 +37,11 @@ const Experience = () => {
             <ul className="flex flex-col">
               {experiences.map((experience) => (
                 <li key={experience.year} className="flex mb-2 sm:mb-1">
+                  {experience.category === 'school' ? (
+                    <FaGraduationCap size={38} className="mx-[0.25rem] my-[-0.30rem] opacity-45 absolute" />
+                  ) : (
+                    <MdWork size={38} className=" mx-[0.25rem] my-[-0.35rem] opacity-45 absolute" />
+                  )}
                   <span className="font-bold text-base lg:text-lg min-w-[3.6rem] lg:min-w-[5rem]">{experience.year}</span>{" "}
                   <div className="flex flex-wrap flex-col">
                     <p className="font-bold">{experience.name}</p>
