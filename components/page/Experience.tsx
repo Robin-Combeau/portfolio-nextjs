@@ -8,6 +8,7 @@ import Section from '../Section';
 import LanguageSelector from '../CodeLanguageSelector';
 import { Roboto_Mono } from 'next/font/google'
 import CodeBlock from '../CodeBlock';
+import CodeWrapper from '../CodeWrapper';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 
@@ -44,11 +45,17 @@ const Experience = () => {
             </ul>
           }
         />
-        
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:self-stretch 2xl:w-[21rem] hidden lg:block">
-          <CodeBlock className='Experiences' selectedLanguage={selectedLanguage} />
-          <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
-        </div>
+
+        <CodeWrapper
+          width="18rem"
+          xxlWidth="21rem"
+          content={
+            <>
+              <CodeBlock className='Experiences' selectedLanguage={selectedLanguage} />
+              <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
+            </>
+          }
+        />
       </motion.div>
     </section>
   );

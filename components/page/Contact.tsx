@@ -9,6 +9,8 @@ import { skills } from "@/lib/data";
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
+import CodeWrapper from '../CodeWrapper';
+import CodeBlock from '../CodeBlock';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 const Contact = () => {
@@ -25,46 +27,17 @@ const Contact = () => {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] lg:self-stretch 2xl:w-[23rem] hidden lg:block">
-          <code className={`${code.className} tracking-tighter`}>
-            {selectedLanguage === 'Javascript' ? (
-              <span>
-                class Mail {'{'}
-                {'\n  '}constructor() {'{'}
-                {'\n    '}this.emailInput = "";
-                {'\n    '}this.messageTextArea = "";
-                {'\n  '}{'}'}
-                {'\n  '}validateEmail(email) {'{'}
-                {'\n    '}{'...'}
-                {'\n  '}{'}'}
-                {'\n  '}sendMessage(email, message) {'{'}
-                {'\n    '}{'...'}
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            ) : (
-              <span>
-                class Mail {'{'}
-                {'\n  '}public $emailInput;
-                {'\n  '}public $messageTextArea;
-                {'\n'}
-                {'\n  '}public function __construct() {'{'}
-                {'\n    '}$this-{'>'}emailInput = "";
-                {'\n    '}$this-{'>'}messageTextArea = "";
-                {'\n  '}{'}'}
-                {'\n  '}public function validateEmail($email) {'{'}
-                {'\n    '}{'...'}
-                {'\n  '}{'}'}
-                {'\n  '}public function ($email, $message) {'{'}
-                {'\n    '}{'...'}
-                {'\n  '}{'}'}
-                {'\n'}{'}'}
-              </span>
-            )}
-          </code>
-          <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
-        </div>
-
+        <CodeWrapper
+          width="18rem"
+          xxlWidth="23rem"
+          content={
+            <>
+              <CodeBlock className='Contact' selectedLanguage={selectedLanguage} />
+              <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
+            </>
+          }
+        />
+      
         <Section
           title="Contact"
           lgWidth="lg:w-[38rem]"

@@ -29,35 +29,40 @@ export const skills = [
   {
     name: "Confirmé",
     value: "confirmed",
-    list: ["PHP", "Laravel", "Javascript", "Git"],
+    list: ["PHP", "Laravel", "Javascript", "jQuery", "REST", "SQL", "Git"],
   },
   {
     name: "Interméd.",
     value: "intermediate",
-    list: ["React.js", "Next.js", "Tailwind", "jQuery", "Zend", "UI Design", "Figma"],
+    list: ["React", "Tailwind", "UX/UI Design", "Figma", "CI/CD"],
   },
   {
     name: "Novice",
     value: "novice",
-    list: ["Node.js", "CI/CD", "Framer Motion"],
-  }
+    list: ["Svelte", "Next", "Vue"],
+  },
+  {
+    name: "Notions",
+    value: "notions",
+    list: ["Angular", "Node", "C#", "Unity", "Java"],
+  },
 ] as const;
 
 export const experiences = [
   {
     year: 2023,
     name: "Septeo",
-    description: "Développeur web Laravel / VueJS / PHP natif",
+    description: "Développeur web Laravel / PHP natif / VueJS",
   },
   {
     year: 2019,
     name: "Sopra Steria",
-    description: "Ingénieur en développement web sur des projets PHP et/ou Javascript",
+    description: "Ingénieur en développement web sur des projets PHP / JS",
   },
   {
     year: 2019,
     name: "Hiphen",
-    description: "Design et marketing (Print / UI design, Wordpress, Réseaux sociaux...)",
+    description: "Design et marketing (Design, Wordpress, Réseaux sociaux...)",
   },
   {
     year: 2018,
@@ -88,5 +93,10 @@ export const codeBlocks = [
     education: '["Montpellier SupAgro", "IUT de la Réunion"]',
     companies: '["Septeo", "Sopra Steria", "Hiphen"]',
     yearsOfExperience: '2019'
+  },
+  {
+    className: "Contact",
+    emailInput: '""',
+    messageTextArea: '""'
   },
 ] as const;

@@ -20,20 +20,21 @@ const Skills = () => {
   const levels = skills.map((level) => level.value);
   const items = skills.map((level) => level.list);
 
-  const generateCodeBlockJavascript = () => {
+  const generateCodeBlock = (language: string) => {
     const classLevels = levels.map((level, index) => {
-      const skillList = items[index].map((skill) => `"${skill}"`);
-      return `this.${level.toLowerCase()} = [${skillList.join(', ')}];`;
+      const limitedSkillList = items[index].slice(0, 3).map((skill) => `"${skill}"`);
+      const skillListWithEllipsis = items[index].length > 3 ? [...limitedSkillList, '...'] : limitedSkillList;
+      const codeLine = language === 'javascript'
+        ? `this.${level.toLowerCase()} = [${skillListWithEllipsis.join(', ')}];`
+        : `$this->${level.toLowerCase()} = [${skillListWithEllipsis.join(', ')}];`;
+      return codeLine;
     });
-    return `class Skills {  \n  constructor() {    \n    ${classLevels.join('\n    ')}  \n  }\n}`;
-  };
 
-  const generateCodeBlockPhp = () => {
-    const classLevels = levels.map((level, index) => {
-      const skillList = items[index].map((skill) => `"${skill}"`);
-      return `$this->${level.toLowerCase()} = [${skillList.join(', ')}];`;
-    });
-    return `class Skills {  \n  public function __construct() {    \n    ${classLevels.join('\n    ')}  \n  }\n}`;
+    const classDeclaration = language === 'javascript'
+      ? 'class Skills {\n  constructor() {\n'
+      : 'class Skills {\n  public function __construct() {\n';
+
+    return `${classDeclaration}    ${classLevels.join('\n    ')}\n  }\n}`;
   };
 
   return (
@@ -66,8 +67,9 @@ const Skills = () => {
         />
         <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] 2xl:w-[23rem] lg:self-stretch hidden lg:block">
           <code className={`${code.className} tracking-tighter`}>
-            {selectedLanguage === 'Javascript' ? (generateCodeBlockJavascript()) : (generateCodeBlockPhp())}
+            {selectedLanguage === 'Javascript' ? generateCodeBlock('javascript') : generateCodeBlock('php')}
           </code>
+          {/* Add LanguageSelector component */}
           <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
         </div>
       </motion.div>

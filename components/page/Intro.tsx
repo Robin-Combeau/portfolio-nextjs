@@ -10,6 +10,7 @@ import SocialButton from '../SocialButton';
 import LinkButton from '../LinkButton';
 import LanguageSelector from '../CodeLanguageSelector';
 import CodeBlock from '../CodeBlock';
+import CodeWrapper from '../CodeWrapper';
 
 const code = Roboto_Mono({ subsets: ['latin'] });
 
@@ -32,14 +33,20 @@ export default function Intro() {
           <span>. Je suis </span>
           <span className="font-bold">développeur fullstack </span>
           <span>depuis </span>
-          <span className="font-bold">4 ans</span>.
+          <span className="font-bold">{ new Date().getFullYear() - 2020 } ans</span>.
           <br /><br />
           Mes domaines de prédilection sont <span className="font-bold">PHP (Laravel)</span> et <span className="font-bold">Javascript (React.js)</span>.
         </div>
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[25rem] lg:self-stretch hidden lg:block 2xl:w-[30rem]">
-          <CodeBlock className='Person' selectedLanguage={selectedLanguage} />
-          <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
-        </div>
+        <CodeWrapper
+          width="25rem"
+          xxlWidth="30rem"
+          content={
+            <>
+              <CodeBlock className='Person' selectedLanguage={selectedLanguage} />
+              <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
+            </>
+          }
+        />
       </motion.div>
 
       <motion.div
