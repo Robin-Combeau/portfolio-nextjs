@@ -47,7 +47,7 @@ const Skills = () => {
         <Section
           title="Compétences"
           lgWidth="lg:w-[38rem]"
-          xxlWidth="2xl:w-[49rem]"
+          xxlWidth="2xl:w-[51rem]"
           bgColor="bg-[#ECB5A3]"
           content={
             <ul className="flex flex-col">
@@ -65,7 +65,7 @@ const Skills = () => {
             </ul>
           }
         />
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] 2xl:w-[23rem] lg:self-stretch hidden lg:block">
+        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] 2xl:w-[21rem] lg:self-stretch hidden lg:block">
           <code className={`${code.className} tracking-tighter`}>
             {selectedLanguage === 'Javascript' ? generateCodeBlock('javascript') : generateCodeBlock('php')}
           </code>
