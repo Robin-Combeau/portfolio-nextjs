@@ -14,7 +14,7 @@ const Footer = () => {
       >
         Fait en Next.js
         <div className="flex items-center">
-          <FaCopyright className="mr-1" size={12} />
+          <FaCopyright className="mr-0.5" size={12} />
           {new Date().getFullYear()} - Robin Combeau
         </div>
       </motion.div>

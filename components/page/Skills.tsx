@@ -53,7 +53,7 @@ const Skills = () => {
             <ul className="flex flex-col">
               {skills.map((level) => (
                 <li key={level.name} className="flex mb-2 sm:mb-1">
-                  <span className="font-bold text-base lg:text-lg min-w-[4.8rem] lg:min-w-[7rem]">{level.name}</span>{" "}
+                  <span className="font-bold text-base lg:text-lg min-w-[5.2rem] lg:min-w-[7rem]">{level.name}</span>{" "}
                   <span className="flex flex-wrap mt-[-5px]">
                     {level.list.map((skill, skillIndex) => (
                       // <Skill skillIndex={skillIndex} skill={skill}/>

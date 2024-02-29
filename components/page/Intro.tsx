@@ -27,7 +27,7 @@ export default function Intro() {
         className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-[10%] lg:mx-4 lg:w-[31rem] h-auto lg:self-stretch 2xl:w-[42rem]">
+        <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-[10%] w-4/5 lg:mx-4 lg:w-[31rem] h-auto lg:self-stretch 2xl:w-[42rem]">
           <span>Je m'appelle </span>
           <span className="font-bold">Robin</span>
           <span>. Je suis </span>
@@ -50,20 +50,18 @@ export default function Intro() {
       </motion.div>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 mb-10 text-base font-semibold sm:gap-6"
+        className="flex flex-col lg:flex-row items-center justify-center gap-2 px-4 mb-10 text-base font-semibold sm:gap-6"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
         <div className="flex gap-6 my-1 sm:my-0 m:gap-6">
           <LinkButton href="#contact" backgroundColor='bg-[#A8C9A0]' content="Me contacter" />
-        </div>
-        <div className="flex gap-6 my-1 sm:my-0 sm:gap-6">
           <LinkButton href="/CV.pdf" download content="Télécharger mon CV" />
         </div>
 
         <div className="flex gap-4 my-1 sm:my-0 sm:gap-6">
-          <SocialButton href={"https://linkedin.com"} icon={<FaLinkedin />} size={24} />
-          <SocialButton href={"https://github.com"} icon={<FaGithub />} size={24} />
-          <SocialButton href={"https://dribbble.com"} icon={<FaDribbble />} size={24} />
+          <SocialButton href={"https://www.linkedin.com/in/robin-combeau"} icon={<FaLinkedin />} size={24} />
+          <SocialButton href={"https://github.com/Robin-Combeau"} icon={<FaGithub />} size={24} />
+          <SocialButton href={"https://dribbble.com/robin-combeau"} icon={<FaDribbble />} size={24} />
         </div>
       </motion.div>
     </section>

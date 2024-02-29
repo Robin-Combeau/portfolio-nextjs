@@ -38,9 +38,9 @@ const Experience = () => {
               {experiences.map((experience) => (
                 <li key={experience.year} className="flex mb-2 sm:mb-1">
                   {experience.category === 'school' ? (
-                    <FaGraduationCap size={38} className="mx-[0.25rem] my-[-0.30rem] opacity-45 absolute" />
+                    <FaGraduationCap size={38} className="mx-[0.1rem] my-[-0.40rem] lg:mx-[0.25rem] lg:my-[-0.30rem] opacity-45 absolute" />
                   ) : (
-                    <MdWork size={38} className=" mx-[0.25rem] my-[-0.35rem] opacity-45 absolute" />
+                    <MdWork size={38} className="mx-[0.1rem] my-[-0.50rem] lg:mx-[0.25rem] lg:my-[-0.35rem] opacity-45 absolute" />
                   )}
                   <span className="font-bold text-base lg:text-lg min-w-[3.6rem] lg:min-w-[5rem]">{experience.year}</span>{" "}
                   <div className="flex flex-wrap flex-col">
