@@ -8,7 +8,7 @@ import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from "react-icons/fi";
 import MotionSection from '../MotionSection'
 
-const Projects = () => {
+export default function Projects() {
   return (
     <MotionSection
       id="projects"
@@ -74,5 +74,3 @@ const Projects = () => {
     />
   )
 }
-
-export default Projects

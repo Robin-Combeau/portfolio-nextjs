@@ -10,7 +10,7 @@ import CodeBlock from '../CodeBlock';
 import MotionSection from '../MotionSection';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
-const Contact = () => {
+export default function Contact() {
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -66,5 +66,3 @@ const Contact = () => {
     />
   );
 };
-
-export default Contact;

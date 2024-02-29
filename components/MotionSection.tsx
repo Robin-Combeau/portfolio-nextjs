@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 interface HtmlSectionProps {
   id: string;
@@ -7,17 +7,18 @@ interface HtmlSectionProps {
   content: React.ReactNode;
 }
 
-const MotionSection: React.FC<HtmlSectionProps> = ({ id, content, scrollMt = "scroll-mt-24" }) => {
+const MotionSection: React.ForwardRefRenderFunction<Element, HtmlSectionProps> = ({ id, content, scrollMt = "scroll-mt-24" }, ref) => {
   return (
     <motion.section
-      id={`${id}`}
+      id={id}
       className={`flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0 ${scrollMt}`}
       initial={{ y: 80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
+      ref={ref as React.MutableRefObject<HTMLElement>}
     >
       {content}
     </motion.section>
   );
 };
 
-export default MotionSection;
+export default forwardRef(MotionSection);

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { skills } from "@/lib/data";
 
 import { Roboto_Mono } from 'next/font/google';
@@ -8,9 +8,20 @@ import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
 import Skill from '../Skill';
 import MotionSection from '../MotionSection';
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useInView } from 'react-intersection-observer';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
-const Skills = () => {
+export default function Skills() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Compétences");
+    }
+  }, [inView, setActiveSection]);
+  
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -40,6 +51,7 @@ const Skills = () => {
   return (
     <MotionSection
       id="skills"
+      ref={ref}
       content={
         <>
           <Section
@@ -73,8 +85,6 @@ const Skills = () => {
     />
   );
 };
-
-export default Skills;
 
 {/* <div className="border-2 border-[#161716] border-b-[8px] bg-[#ECB5A3] text-lg lg:text-xl font-medium px-6 py-4 lg:px-8 lg:py-6 rounded-xl mx-[10%] lg:mx-4 lg:w-[38rem] h-auto lg:h-[19rem]">
           <h1 className="font-bold mb-6 text-2xl">Compétences</h1>

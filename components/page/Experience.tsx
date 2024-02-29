@@ -14,7 +14,7 @@ import MotionSection from '../MotionSection';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 
-const Experience = () => {
+export default function Experience() {
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -33,7 +33,7 @@ const Experience = () => {
             bgColor="bg-[#A8C9A0]"
             content={<ul className="flex flex-col">
               {experiences.map((experience) => (
-                <li key={experience.year} className="flex mb-2 sm:mb-1">
+                <li key={experience.name} className="flex mb-2 sm:mb-1">
                   {experience.category === 'school' ? (
                     <FaGraduationCap size={38} className="mx-[0.1rem] my-[-0.40rem] lg:mx-[0.25rem] lg:my-[-0.30rem] opacity-45 absolute" />
                   ) : (
@@ -65,5 +65,3 @@ const Experience = () => {
   </>
   );
 };
-
-export default Experience;

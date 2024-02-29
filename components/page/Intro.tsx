@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'
 
 import { FaDribbble, FaGithub, FaLinkedin } from "react-icons/fa";
@@ -11,10 +11,21 @@ import LinkButton from '../LinkButton';
 import LanguageSelector from '../CodeLanguageSelector';
 import CodeBlock from '../CodeBlock';
 import CodeWrapper from '../CodeWrapper';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function Intro() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Accueil");
+    }
+  }, [inView, setActiveSection]);
+
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -22,11 +33,12 @@ export default function Intro() {
   };
 
   return (
-    <section id="home" className="scroll-mt-32">
+    <section id="home" className="scroll-mt-40">
       <motion.div
         className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}>
+        animate={{ y: 0, opacity: 1 }}
+        ref={ref}>
         <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-xl lg:text-2xl font-medium px-6 py-4 pr-14 rounded-xl mx-[10%] w-4/5 lg:mx-4 lg:w-[31rem] h-auto lg:self-stretch 2xl:w-[42rem]">
           <span>Je m'appelle </span>
           <span className="font-bold">Robin</span>

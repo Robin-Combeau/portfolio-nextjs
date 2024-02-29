@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import localFont from 'next/font/local'
 import Header from '@/components/page/Header'
+import ActiveSectionContextProvider from '@/context/active-section-context'
 
 
 const avenir = localFont({
@@ -82,8 +83,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body suppressHydrationWarning={true} className={`${avenir.className} font-medium text-[#161716] tracking-[-0.03rem] bg-[#EAF0EA] pt-28 sm:pt-30 lg:pt-36` }>
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   )

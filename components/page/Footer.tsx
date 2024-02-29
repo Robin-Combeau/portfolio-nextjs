@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import { FaCopyright } from 'react-icons/fa'
 
-const Footer = () => {
+export default function Footer() {
   return (
     <section id="footer">
       <motion.div
-        className="flex flex-col items-center justify-center text-sm"
+        className="flex flex-col items-center justify-center text-sm mb-2"
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 0.7 }}
       >
@@ -21,5 +21,3 @@ const Footer = () => {
     </section >
   )
 }
-
-export default Footer

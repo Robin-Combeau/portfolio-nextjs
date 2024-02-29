@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
@@ -8,9 +8,20 @@ import Section from '../Section';
 import CodeBlock from '../CodeBlock';
 import CodeWrapper from '../CodeWrapper';
 import MotionSection from '../MotionSection';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
-const About = () => {
+export default function About() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("À propos");
+    }
+  }, [inView, setActiveSection]);
+
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -20,6 +31,7 @@ const About = () => {
   return (
     <MotionSection
       id="about"
+      ref={ref}
       content={
         <>
           <CodeWrapper
@@ -51,8 +63,6 @@ const About = () => {
     />
   );
 };
-
-export default About;
 
 {/* <div className="border-2 border-[#161716] border-b-[8px] bg-[#A8C9A0] text-lg lg:text-xl font-medium px-6 py-4 lg:px-8 lg:py-6 rounded-xl mx-[10%] lg:mx-4 lg:w-[38rem] h-auto lg:h-[21rem]">
           <h1 className="font-bold mb-6 text-2xl">À propos</h1>
