@@ -1,16 +1,13 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion'
-
-import { FaRegStar } from "react-icons/fa";
-import { skills } from "@/lib/data";
 
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
 import CodeBlock from '../CodeBlock';
 import CodeWrapper from '../CodeWrapper';
+import MotionSection from '../MotionSection';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 const About = () => {
@@ -21,38 +18,37 @@ const About = () => {
   };
 
   return (
-    <section id="about">
-      <motion.div
-        className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
-        initial={{ y: 80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-      >
-        <CodeWrapper
-          width="18rem"
-          xxlWidth="21rem"
-          content={
-            <>
-              <CodeBlock className='About' selectedLanguage={selectedLanguage} />
-              <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
-            </>
-          }
-        />
+    <MotionSection
+      id="about"
+      content={
+        <>
+          <CodeWrapper
+            width="18rem"
+            xxlWidth="21rem"
+            content={
+              <>
+                <CodeBlock className='About' selectedLanguage={selectedLanguage} />
+                <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
+              </>
+            }
+          />
 
-        <Section
-          title="À propos"
-          lgWidth="lg:w-[38rem]"
-          xxlWidth="2xl:w-[51rem]"
-          bgColor="bg-[#A8C9A0]"
-          content={
-            <div className="flex flex-col text-sm break-words">
-              <span className="mb-3">Après mon diplôme d'ingénieur en agronomie spécialisé dans les nouvelles technologies, j'ai décidé de poursuivre ma passion grandissante pour la programmation. Après une formation de 2 mois et demi, j'ai commencé à être développeur et cela fait plus de 4 ans aujourd'hui.</span>
-              <span className="mb-3">Ce que j'apprécie dans la programmation c'est la résolution de problème et de toujours essayer de trouver la solution la plus optimale. Aujourd'hui, mes frameworks de prédilection sont Laravel et ReactJS/NextJS. J'ai aussi pu travailler sur de nombreuses autres technos comme PHP natif, jQuery, Java, C#, Node et bien d'autres...</span>
-              <span className="mb-3">En dehors du code, j'ai d'autres passions comme le volley-ball, la musique et les jeux-vidéos. Même dans ma vie personnelle, je souhaite toujours apprendre des nouvelles choses.</span>
-            </div>
-          }
-        />
-      </motion.div>
-    </section>
+          <Section
+            title="À propos"
+            lgWidth="lg:w-[38rem]"
+            xxlWidth="2xl:w-[51rem]"
+            bgColor="bg-[#A8C9A0]"
+            content={
+              <div className="flex flex-col text-sm break-words">
+                <span className="mb-3">Après mon diplôme d'ingénieur en agronomie spécialisé dans les nouvelles technologies, j'ai décidé de poursuivre ma passion grandissante pour la programmation. Après une formation de 2 mois et demi, j'ai commencé à être développeur et cela fait plus de 4 ans aujourd'hui.</span>
+                <span className="mb-3">Ce que j'apprécie dans la programmation c'est la résolution de problème et de toujours essayer de trouver la solution la plus optimale. Aujourd'hui, mes frameworks de prédilection sont Laravel et ReactJS/NextJS. J'ai aussi pu travailler sur de nombreuses autres technos comme PHP natif, jQuery, Java, C#, Node et bien d'autres...</span>
+                <span className="mb-3">En dehors du code, j'ai d'autres passions comme le volley-ball, la musique et les jeux-vidéos. Même dans ma vie personnelle, je souhaite toujours apprendre des nouvelles choses.</span>
+              </div>
+            }
+          />
+        </>
+      }
+    />
   );
 };
 

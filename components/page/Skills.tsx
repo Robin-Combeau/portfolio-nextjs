@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion'
 import { skills } from "@/lib/data";
 
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
 import Skill from '../Skill';
+import MotionSection from '../MotionSection';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 const Skills = () => {
@@ -38,42 +38,39 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills">
-      <motion.div
-        className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
-        initial={{ y: 80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-      >
-        <Section
-          title="Compétences"
-          lgWidth="lg:w-[38rem]"
-          xxlWidth="2xl:w-[51rem]"
-          bgColor="bg-[#ECB5A3]"
-          content={
-            <ul className="flex flex-col">
-              {skills.map((level) => (
-                <li key={level.name} className="flex mb-2 sm:mb-1">
-                  <span className="font-bold text-base lg:text-lg min-w-[5.2rem] lg:min-w-[7rem]">{level.name}</span>{" "}
-                  <span className="flex flex-wrap mt-[-5px]">
-                    {level.list.map((skill, skillIndex) => (
-                      // <Skill skillIndex={skillIndex} skill={skill}/>
-                      <Skill key={skillIndex} skill={skill} />
-                    ))}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          }
-        />
-        <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] 2xl:w-[21rem] lg:self-stretch hidden lg:block">
-          <code className={`${code.className} tracking-tighter`}>
-            {selectedLanguage === 'Javascript' ? generateCodeBlock('javascript') : generateCodeBlock('php')}
-          </code>
-          {/* Add LanguageSelector component */}
-          <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
-        </div>
-      </motion.div>
-    </section>
+    <MotionSection
+      id="skills"
+      content={
+        <>
+          <Section
+            title="Compétences"
+            lgWidth="lg:w-[38rem]"
+            xxlWidth="2xl:w-[51rem]"
+            bgColor="bg-[#ECB5A3]"
+            content={
+              <ul className="flex flex-col">
+                {skills.map((level) => (
+                  <li key={level.name} className="flex mb-2 sm:mb-1">
+                    <span className="font-bold text-base lg:text-lg min-w-[5.2rem] lg:min-w-[7rem]">{level.name}</span>{" "}
+                    <span className="flex flex-wrap mt-[-5px]">
+                      {level.list.map((skill, skillIndex) => (
+                        <Skill key={skillIndex} skill={skill} />
+                      ))}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            }
+          />
+          <div className="relative border-2 border-neutral-500 text-neutral-500 border-b-[8px] bg-[#EAF0EA] text-sm font-medium px-4 py-4 pr-4 rounded-xl whitespace-pre-wrap diagonal-line-pattern mx-8 lg:mx-4 w-[18rem] 2xl:w-[21rem] lg:self-stretch hidden lg:block">
+            <code className={`${code.className} tracking-tighter`}>
+              {selectedLanguage === 'Javascript' ? generateCodeBlock('javascript') : generateCodeBlock('php')}
+            </code>
+            <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
+          </div>
+        </>
+      }
+    />
   );
 };
 

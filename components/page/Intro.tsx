@@ -22,7 +22,7 @@ export default function Intro() {
   };
 
   return (
-    <section id="intro">
+    <section id="home" className="scroll-mt-32">
       <motion.div
         className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
         initial={{ y: 80, opacity: 0 }}
