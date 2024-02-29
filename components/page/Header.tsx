@@ -39,8 +39,8 @@ export default function Header() {
         className="flex fixed top-[0.15rem] right-3 lg:right-20 py-2 sm:top-[1.2rem] lg:sm:top-[1.7rem] sm:py-0 lg:flex-row hidden sm:block lg:flex"
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full mb-1 lg:mb-2">EN</button>
-        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full"><IoMdMoon size={24} /></button>
+        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full mb-1 lg:mb-2 bg-[#EAF0EA]">EN</button>
+        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full bg-[#EAF0EA]"><IoMdMoon size={24} /></button>
       </motion.div>
     </header>
   )

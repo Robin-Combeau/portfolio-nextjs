@@ -39,7 +39,7 @@ export const skills = [
   {
     name: "Novice",
     value: "novice",
-    list: ["Svelte", "Next", "Vue", "Typescript"],
+    list: ["Svelte", "Next", "Vue", "Typescript", "Symfony"],
   },
   {
     name: "Notions",
@@ -49,23 +49,29 @@ export const skills = [
 ] as const;
 
 export const experiences = [
+  // {
+  //   year: 2024,
+  //   category: "work",
+  //   name: "Guarani - Simpliciti",
+  //   description: "Ingénieur en développement web | Svelte - Symfony",
+  // },
   {
     year: 2023,
     category: "work",
     name: "Septeo",
-    description: "Développeur web Laravel / PHP natif / VueJS",
+    description: "Développeur web | Laravel - PHP natif - VueJS",
   },
   {
     year: 2019,
     category: "work",
     name: "Sopra Steria",
-    description: "Ingénieur en développement web sur des projets PHP / JS",
+    description: "Ingénieur en développement web | PHP - JS",
   },
   {
     year: 2019,
     category: "work",
     name: "Hiphen",
-    description: "Design et marketing (Design, Wordpress, Réseaux sociaux...)",
+    description: "Design et marketing | Design - Wordpress - Réseaux sociaux ...",
   },
   {
     year: 2018,
@@ -74,7 +80,7 @@ export const experiences = [
     description: "TIC (Technologies de l'Information et de la Communication)",
   },
   {
-    year: '2014',
+    year: 2014,
     category: "school",
     name: "DUT Génie Biologique",
     description: "Génie de l'environnement",

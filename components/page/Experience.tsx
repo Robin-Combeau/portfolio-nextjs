@@ -11,6 +11,7 @@ import CodeBlock from '../CodeBlock';
 import CodeWrapper from '../CodeWrapper';
 import { FaGraduationCap } from 'react-icons/fa';
 import { MdWork } from "react-icons/md";
+import MotionSection from '../MotionSection';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 
@@ -21,20 +22,17 @@ const Experience = () => {
     setSelectedLanguage(language);
   };
 
-  return (
-    <section id="experience">
-      <motion.div
-        className="flex mb-10 flex-col items-center lg:flex-row lg:justify-center gap-y-4 lg:gap-y-0"
-        initial={{ y: 80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-      >
-        <Section
-          title="Expériences"
-          lgWidth="lg:w-[38rem]"
-          xxlWidth="2xl:w-[51rem]"
-          bgColor="bg-[#A8C9A0]"
-          content={
-            <ul className="flex flex-col">
+  return (<>
+    <MotionSection
+      id="experience"
+      content={
+        <>
+          <Section
+            title="Expériences"
+            lgWidth="lg:w-[38rem]"
+            xxlWidth="2xl:w-[51rem]"
+            bgColor="bg-[#A8C9A0]"
+            content={<ul className="flex flex-col">
               {experiences.map((experience) => (
                 <li key={experience.year} className="flex mb-2 sm:mb-1">
                   {experience.category === 'school' ? (
@@ -49,22 +47,23 @@ const Experience = () => {
                   </div>
                 </li>
               ))}
-            </ul>
-          }
-        />
+            </ul>}
+          />
+          <CodeWrapper
+            width="18rem"
+            xxlWidth="21rem"
+            content={
+              <>
+                <CodeBlock className='Experiences' selectedLanguage={selectedLanguage} />
+                <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
+              </>
+            }
+          />
+        </>
+      }
 
-        <CodeWrapper
-          width="18rem"
-          xxlWidth="21rem"
-          content={
-            <>
-              <CodeBlock className='Experiences' selectedLanguage={selectedLanguage} />
-              <LanguageSelector selectedLanguage={selectedLanguage} handleLanguageChange={handleLanguageChange} />
-            </>
-          }
-        />
-      </motion.div>
-    </section>
+    />
+  </>
   );
 };
 

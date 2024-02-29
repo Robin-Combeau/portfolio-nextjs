@@ -80,7 +80,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body suppressHydrationWarning={true} className={`${avenir.className} font-medium text-[#161716] tracking-[-0.03rem] bg-[#EAF0EA] pt-28 sm:pt-30 lg:pt-36` }>
         <Header />
         {children}

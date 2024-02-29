@@ -60,7 +60,7 @@ const Contact = () => {
                 required
                 maxLength={4000}
               />
-              <button type="submit" className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[8rem] self-end">
+              <button type="submit" className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[7rem] hover:bg-[#C48976] transition self-end">
                 Envoyer
               </button>
             </form>
