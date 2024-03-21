@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from './CodeLanguageSelector';
 import { codeBlocks } from "@/lib/data";
@@ -11,6 +11,7 @@ interface CodeBlockProps {
 }
 const CodeBlock: FC<CodeBlockProps> = ({ className, selectedLanguage }) => {
   const selectedBlock = codeBlocks.find((block) =>block.className === className);
+
   if (!selectedBlock) {
     return <span></span>;
   }

@@ -10,11 +10,14 @@ import CodeBlock from '../CodeBlock';
 import MotionSection from '../MotionSection';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { sendEmail } from "@/actions/sendEmail"
+import { useFormStatus } from 'react-dom';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function Contact() {
   const { ref, inView } = useInView();
   const { setActiveSection } = useActiveSectionContext();
+  const { pending } = useFormStatus();
 
   useEffect(() => {
     if (inView) {
@@ -50,10 +53,16 @@ export default function Contact() {
             xxlWidth="2xl:w-[51rem]"
             bgColor="bg-[#ECB5A3]"
             content={
-              <form className="flex flex-col text-base">
+              <form
+              className="flex flex-col text-base"
+              action={(formData) =>{
+                sendEmail(formData);
+
+              }}
+              >
                 <input
                   className="h-14 border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-5 py-3 rounded-xl my-2 focus:outline-none"
-                  name="senderEmail"
+                  name="email"
                   type="email"
                   title="Renseignez votre adresse mail."
                   required
