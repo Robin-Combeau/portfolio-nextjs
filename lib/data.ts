@@ -34,7 +34,7 @@ export const skills = [
   {
     name: "Interméd.",
     value: "intermediate",
-    list: ["React", "Tailwind", "UX/UI Design", "Figma", "CI/CD"],
+    list: ["React", "Tailwind", "UX/UI", "Figma", "CI/CD"],
   },
   {
     name: "Novice",
@@ -44,17 +44,17 @@ export const skills = [
   {
     name: "Notions",
     value: "notions",
-    list: ["Angular", "Node", "C#", "Unity", "Java"],
+    list: ["Angular", "Node", "C#", "Java"],
   },
 ] as const;
 
 export const experiences = [
-  // {
-  //   year: 2024,
-  //   category: "work",
-  //   name: "Guarani - Simpliciti",
-  //   description: "Ingénieur en développement web | Svelte - Symfony",
-  // },
+  {
+    year: 2024,
+    category: "work",
+    name: "Guarani - Simpliciti",
+    description: "Ingénieur en développement web | VueJS - Symfony",
+  },
   {
     year: 2023,
     category: "work",
@@ -76,7 +76,7 @@ export const experiences = [
   {
     year: 2018,
     category: "school",
-    name: "Diplôme d'ingénieur en agronomie",
+    name: "Ingénieur en agronomie",
     description: "TIC (Technologies de l'Information et de la Communication)",
   },
   {
@@ -101,8 +101,8 @@ export const codeBlocks = [
   },
   {
     className: "Experiences",
-    education: '["Montpellier SupAgro", "IUT de la Réunion"]',
-    companies: '["Septeo", "Sopra Steria", "Hiphen"]',
+    education: '["Ingénieur agronome", "DUT Génie Biologique"]',
+    companies: '["Guarani", "Septeo", "Sopra Steria", "Hiphen"]',
     yearsOfExperience: '2019'
   },
   {

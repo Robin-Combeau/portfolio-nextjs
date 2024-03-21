@@ -12,7 +12,7 @@ export default function Footer() {
         initial={{ y: 80, opacity: 0 }}
         animate={{ y: 0, opacity: 0.7 }}
       >
-        Fait en Next.js
+        Fait avec Next.js
         <div className="flex items-center">
           <FaCopyright className="mr-0.5" size={12} />
           {new Date().getFullYear()} - Robin Combeau
