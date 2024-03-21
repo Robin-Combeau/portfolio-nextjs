@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Roboto_Mono } from 'next/font/google';
 import LanguageSelector from '../CodeLanguageSelector';
@@ -8,9 +8,20 @@ import Section from '../Section';
 import CodeWrapper from '../CodeWrapper';
 import CodeBlock from '../CodeBlock';
 import MotionSection from '../MotionSection';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function Contact() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Contact");
+    }
+  }, [inView, setActiveSection]);
+  
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -44,6 +55,7 @@ export default function Contact() {
                   className="h-14 border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-5 py-3 rounded-xl my-2 focus:outline-none"
                   name="senderEmail"
                   type="email"
+                  title="Renseignez votre adresse mail."
                   required
                   maxLength={500}
                   placeholder="Votre adresse mail"
@@ -51,11 +63,15 @@ export default function Contact() {
                 <textarea
                   className="h-44 border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-5 py-3 rounded-xl my-2 resize-none	focus:outline-none"
                   name="message"
+                  title="Ecrivez votre message."
                   placeholder="Votre message"
                   required
                   maxLength={4000}
                 />
-                <button type="submit" className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[7rem] hover:bg-[#C48976] transition self-end">
+                <button
+                  className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[7rem] hover:bg-[#C48976] transition self-end text-lg"
+                  type="submit"
+                  title="Envoyer">
                   Envoyer
                 </button>
               </form>

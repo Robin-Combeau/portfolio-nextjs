@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <header className="z-[999] relative">
-      <motion.div className="fixed top-0 left-1/2 h-[5rem] w-full rounded-none border-2 border-[#161716] border-b-[6px] bg-[#EAF0EA] backdrop-blur-[0.5em] sm:top-4 lg:top-6 sm:h-[3rem] lg:h-[3.6rem] sm:w-[30rem] lg:w-[40rem] sm:rounded-xl"
+      <motion.div className="fixed top-0 left-1/2 h-[5rem] w-full rounded-none border-2 border-[#161716] border-b-[6px] bg-[#EAF0EA] backdrop-blur-[0.5em] sm:top-4 lg:top-6 sm:h-[3rem] lg:h-[3.6rem] sm:w-[30rem] lg:w-[40rem] sm:rounded-xl diagonal-line-pattern"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -29,9 +29,9 @@ export default function Header() {
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className={clsx("flex w-full items-center justify-center px-2 lg:px-4 py-2 lg:py-3 hover:text-[#161716] transition",
+                className={clsx("flex w-full items-center justify-center mx-1 px-1 lg:mx-2 lg:px-2 my-1 py-1 lg:py-1.5 hover:text-[#161716] transition",
                   {
-                    "text-[#161716]": activeSection === link.name
+                    "text-[#161716] border-2 border-[#161716] border-b-[4px] rounded-xl bg-[#EAF0EA]": activeSection === link.name
                   }
                 )}
                 href={link.hash}
@@ -48,7 +48,7 @@ export default function Header() {
         className="flex fixed top-[0.15rem] right-3 lg:right-20 py-2 sm:top-[1.2rem] lg:sm:top-[1.7rem] sm:py-0 lg:flex-row hidden sm:block lg:flex"
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}>
-        <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full mb-1 lg:mb-2 bg-[#EAF0EA]">EN</button>
+        {/* <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full mb-1 lg:mb-2 bg-[#EAF0EA]">EN</button> */}
         <button className="flex items-center justify-center h-8 w-8 lg:h-10 lg:w-10 sm:mx-2 mx-0.5 p-1.5 transition text-sm lg:text-base font-bold border-2 border-[#161716] rounded-full bg-[#EAF0EA]"><IoMdMoon size={24} /></button>
       </motion.div>
     </header>

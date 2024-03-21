@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { experiences } from "@/lib/data";
 
 import Section from '../Section';
@@ -11,10 +11,21 @@ import CodeWrapper from '../CodeWrapper';
 import { FaGraduationCap } from 'react-icons/fa';
 import { MdWork } from "react-icons/md";
 import MotionSection from '../MotionSection';
+import { useInView } from 'react-intersection-observer';
+import { useActiveSectionContext } from '@/context/active-section-context';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 
 export default function Experience() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Expériences");
+    }
+  }, [inView, setActiveSection]);
+  
   const [selectedLanguage, setSelectedLanguage] = useState<'Javascript' | 'PHP'>('Javascript');
 
   const handleLanguageChange = (language: 'Javascript' | 'PHP') => {
@@ -24,6 +35,7 @@ export default function Experience() {
   return (<>
     <MotionSection
       id="experience"
+      ref={ref}
       content={
         <>
           <Section

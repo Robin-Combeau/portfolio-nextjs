@@ -1,17 +1,29 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import Section from '../Section'
 import Skill from '../Skill'
 
 import { FaGithub } from 'react-icons/fa'
 import { FiExternalLink } from "react-icons/fi";
 import MotionSection from '../MotionSection'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
 
 export default function Projects() {
+  const { ref, inView } = useInView();
+  const { setActiveSection } = useActiveSectionContext();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("Projets");
+    }
+  }, [inView, setActiveSection]);
+  
   return (
     <MotionSection
       id="projects"
+      ref={ref}
       content={
         <>
           <Section

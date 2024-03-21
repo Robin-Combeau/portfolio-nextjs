@@ -2,7 +2,7 @@ import React from 'react';
 
 interface SkillProps {
   skill: string;
-  lgTextSize?: string; // Optional prop for text size
+  lgTextSize?: string;
 }
 
 const Skill: React.FC<SkillProps> = ({ skill, lgTextSize = "lg:text-base" }) => {
