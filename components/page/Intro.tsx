@@ -69,7 +69,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}>
         <div className="flex gap-6 my-1 sm:my-0 m:gap-6">
           <LinkButton href="#contact" backgroundColor='bg-[#A8C9A0]' content="Me contacter" />
-          <LinkButton href="/CV.pdf" backgroundColor='bg-[#ECB5A3]' hoverBackgroundColor='hover:bg-[#C48976]' download content="Télécharger mon CV" />
+          <LinkButton href="/files/CV-2023.pdf" backgroundColor='bg-[#ECB5A3]' hoverBackgroundColor='hover:bg-[#C48976]' download content="Télécharger mon CV" />
         </div>
 
         <div className="flex gap-4 my-1 sm:my-0 sm:gap-6">

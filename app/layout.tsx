@@ -3,6 +3,8 @@ import './globals.css'
 import localFont from 'next/font/local'
 import Header from '@/components/page/Header'
 import ActiveSectionContextProvider from '@/context/active-section-context'
+import Footer from '@/components/page/Footer'
+import { Toaster } from 'react-hot-toast'
 
 
 const avenir = localFont({
@@ -81,11 +83,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="fr" className="!scroll-smooth">
       <body suppressHydrationWarning={true} className={`${avenir.className} font-medium text-[#161716] tracking-[-0.03rem] bg-[#EAF0EA] pt-28 sm:pt-30 lg:pt-36` }>
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Footer />
+          <Toaster position="bottom-right" />
         </ActiveSectionContextProvider>
       </body>
     </html>

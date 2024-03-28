@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 
 import { Roboto_Mono } from 'next/font/google';
+import { RiMailSendFill } from "react-icons/ri";
 import LanguageSelector from '../CodeLanguageSelector';
 import Section from '../Section';
 import CodeWrapper from '../CodeWrapper';
@@ -12,6 +13,7 @@ import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
 import { sendEmail } from "@/actions/sendEmail"
 import { useFormStatus } from 'react-dom';
+import toast from 'react-hot-toast';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function Contact() {
@@ -59,8 +61,12 @@ export default function Contact() {
               <form
               className="flex flex-col text-base"
               action={(formData) =>{
-                sendEmail(formData);
-
+                const {data, error} = sendEmail(formData);
+                if(error){
+                  toast.error("Il y a eu une erreur : " + error);
+                  return;
+                }
+                toast.success("Mail envoyé !");
               }}
               >
                 <input
@@ -81,10 +87,11 @@ export default function Contact() {
                   maxLength={4000}
                 />
                 <button
-                  className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[7rem] hover:bg-[#C48976] transition self-end font-semibold"
+                  className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[8rem] hover:bg-[#C48976] transition self-end font-semibold"
+                  disabled={pending}
                   type="submit"
                   title="Envoyer">
-                  Envoyer
+                  Envoyer <RiMailSendFill />
                 </button>
               </form>
             }

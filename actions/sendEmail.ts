@@ -24,9 +24,9 @@ export const sendEmail = (formData: FormData) => {
     };
   }
 
-
+  let data;
   try{
-    resend.emails.send({
+    data = resend.emails.send({
       from: 'Message du portfolio <onboarding@resend.dev>',
       to: 'robin.combeau@gmail.com',
       subject: 'Message de robincombeau.work',
@@ -41,5 +41,9 @@ export const sendEmail = (formData: FormData) => {
     return {
       error: getErrorMessage(error),
     }
+  }
+
+  return {
+    data
   }
 };

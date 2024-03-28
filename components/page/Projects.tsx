@@ -29,7 +29,7 @@ export default function Projects() {
       content={
         <>
           <Section
-            title="Projets"
+            title="Projets perso"
             lgWidth="lg:w-[58rem]"
             xxlWidth="2xl:w-[74rem]"
             bgColor="bg-[#ECB5A3]"
