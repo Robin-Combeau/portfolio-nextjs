@@ -13,7 +13,9 @@ import { useInView } from 'react-intersection-observer';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function Skills() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 1
+  });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {

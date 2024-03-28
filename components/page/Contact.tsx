@@ -15,7 +15,9 @@ import { useFormStatus } from 'react-dom';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function Contact() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 1
+  });
   const { setActiveSection } = useActiveSectionContext();
   const { pending } = useFormStatus();
 
@@ -34,6 +36,7 @@ export default function Contact() {
   return (
     <MotionSection
       id="contact"
+      ref={ref}
       content={
         <>
           <CodeWrapper

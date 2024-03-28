@@ -17,7 +17,9 @@ const code = Roboto_Mono({ subsets: ['latin'] });
 
 
 export default function Experience() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 1
+  });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {

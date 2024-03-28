@@ -13,7 +13,9 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 const code = Roboto_Mono({ subsets: ['latin'] });
 
 export default function About() {
-  const { ref, inView } = useInView();
+  const { ref, inView } = useInView({
+    threshold: 1
+  });
   const { setActiveSection } = useActiveSectionContext();
 
   useEffect(() => {
