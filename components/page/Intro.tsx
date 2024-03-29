@@ -73,9 +73,9 @@ export default function Intro() {
         </div>
 
         <div className="flex gap-4 my-1 sm:my-0 sm:gap-6">
-          <SocialButton href={"https://www.linkedin.com/in/robin-combeau"} icon={<FaLinkedin />} size={24} />
+          <SocialButton href={"https://www.linkedin.com/in/robin-combeau"} icon={<FaLinkedin />} size={24} hoverTextColor={'hover:text-[#0077B5]'}/>
           <SocialButton href={"https://github.com/Robin-Combeau"} icon={<FaGithub />} size={24} />
-          <SocialButton href={"https://dribbble.com/robin-combeau"} icon={<FaDribbble />} size={24} />
+          <SocialButton href={"https://dribbble.com/robin-combeau"} icon={<FaDribbble />} size={24} hoverTextColor={'hover:text-[#B8509A]'}/>
         </div>
       </motion.div>
     </section>

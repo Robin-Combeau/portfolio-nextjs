@@ -41,7 +41,7 @@ export default function Experience() {
       content={
         <>
           <Section
-            title="Expériences"
+            title="Expériences et formations"
             lgWidth="lg:w-[38rem]"
             xxlWidth="2xl:w-[51rem]"
             bgColor="bg-[#A8C9A0]"

@@ -66,7 +66,9 @@ export default function Contact() {
                   toast.error("Il y a eu une erreur : " + error);
                   return;
                 }
-                toast.success("Mail envoyé !");
+                toast.success("Mail envoyé !", {
+                  duration: 5000
+                });
               }}
               >
                 <input
@@ -87,7 +89,7 @@ export default function Contact() {
                   maxLength={4000}
                 />
                 <button
-                  className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[8rem] hover:bg-[#C48976] transition self-end font-semibold"
+                  className="border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-3 py-3 rounded-xl my-2 focus:outline-none flex items-center justify-center gap-2 h-[3rem] w-[8rem] hover:bg-[#C48976] transition self-end font-semibold tracking-tight"
                   disabled={pending}
                   type="submit"
                   title="Envoyer">
