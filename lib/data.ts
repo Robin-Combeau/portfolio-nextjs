@@ -29,22 +29,22 @@ export const skills = [
   {
     name: "Confirmé",
     value: "confirmed",
-    list: ["PHP", "Laravel", "Javascript", "jQuery", "REST", "SQL", "Git"],
+    list: ["PHP", "Laravel", "Javascript", "jQuery", "SQL", "Git"],
   },
   {
     name: "Interméd.",
     value: "intermediate",
-    list: ["React", "Tailwind", "UX/UI", "Figma", "CI/CD"],
+    list: ["React", "Vue", "Typescript", "Symfony", "Tailwind", "UX/UI", "Figma", "PHPUnit"],
   },
   {
     name: "Novice",
     value: "novice",
-    list: ["Svelte", "Next", "Vue", "Typescript", "Symfony"],
+    list: ["Svelte", "Next", "Node", "CI/CD", "Docker"],
   },
   {
     name: "Notions",
     value: "notions",
-    list: ["Angular", "Node", "C#", "Java"],
+    list: ["Angular", "Java", "C#", ".NET", "GDscript"],
   },
 ] as const;
 
@@ -53,7 +53,7 @@ export const experiences = [
     year: 2024,
     category: "work",
     name: "Guarani - Simpliciti",
-    description: "Ingénieur en développement web | VueJS - Symfony",
+    description: "Ingénieur logiciel | VueJS - Symfony",
   },
   {
     year: 2023,
@@ -65,13 +65,13 @@ export const experiences = [
     year: 2019,
     category: "work",
     name: "Sopra Steria",
-    description: "Ingénieur en développement web | PHP - JS",
+    description: "Ingénieur logiciel | PHP - JS",
   },
   {
     year: 2019,
     category: "work",
     name: "Hiphen",
-    description: "Design et marketing | Design - Wordpress - Réseaux sociaux ...",
+    description: "Ingénieur junior | Design - Wordpress - Marketing ...",
   },
   {
     year: 2018,
