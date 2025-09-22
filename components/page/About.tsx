@@ -54,9 +54,9 @@ export default function About() {
             bgColor="bg-[#A8C9A0]"
             content={
               <div className="flex flex-col text-sm break-words text-justify">
-                <span className="mb-3">Après mon diplôme d'ingénieur en agronomie spécialisé dans les nouvelles technologies, j'ai décidé de poursuivre ma passion grandissante pour la programmation. Cela fait { new Date().getFullYear() - 2019 } ans aujourd'hui que j'exerce ce métier.</span>
-                <span className="mb-3">Ce que j'apprécie dans la programmation c'est la résolution de problème et de toujours essayer de trouver la solution la plus optimale. Mes langages de prédilection sont PHP (Laravel) et Javascript (ReactJS). J'ai aussi pu travailler sur de nombreux autres frameworks et technologies comme Vue, Symfony, Svelte, Java ... etc.</span>
-                <span className="mb-3">En dehors du code, j'ai d'autres passions comme le volley-ball, la musique et les jeux en tout genre. Même dans ma vie personnelle, je souhaite toujours apprendre et découvrir de nouvelles choses.</span>
+                <span className="mb-3">Après mon diplôme d'ingénieur en agronomie spécialisé dans les nouvelles technologies, j'ai décidé de poursuivre ma passion grandissante pour la programmation. Cela fait { new Date().getFullYear() - 2020 } ans aujourd'hui que j'exerce ce métier.</span>
+                <span className="mb-3">Ce que j'apprécie dans la programmation c'est la résolution de problème et de toujours essayer de trouver la solution la plus optimale. Mes langages de prédilection sont PHP et Javascript. J'ai aussi pu travailler sur de nombreux autres frameworks et technologies (voir Partie Compétences).</span>
+                <span className="mb-3">En dehors du code, j'ai d'autres passions comme le volley-ball ou la musique. Même dans ma vie personnelle, je souhaite toujours apprendre et découvrir de nouvelles choses.</span>
               </div>
             }
           />

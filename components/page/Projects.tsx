@@ -53,9 +53,8 @@ export default function Projects() {
                     </div>
 
                     <div className="flex flex-wrap bottom-0 lg:absolute">
-                      <Skill skill="Laravel" lgTextSize="lg:text-sm" />
-                      <Skill skill="React.js" lgTextSize="lg:text-sm" />
-                      <Skill skill="Tailwind" lgTextSize="lg:text-sm" />
+                      <Skill skill="SvelteKit" lgTextSize="lg:text-sm" />
+                      <Skill skill="Typescript" lgTextSize="lg:text-sm" />
                     </div>
                   </div>
                 </div>

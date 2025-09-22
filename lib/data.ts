@@ -29,22 +29,22 @@ export const skills = [
   {
     name: "Confirmé",
     value: "confirmed",
-    list: ["PHP", "Laravel", "Javascript", "jQuery", "SQL", "Git"],
+    list: ["PHP", "Laravel", "Symfony", "Javascript/Typescript", "SQL", "API Platform", "Vue"],
   },
   {
     name: "Interméd.",
     value: "intermediate",
-    list: ["React", "Vue", "Typescript", "Symfony", "Tailwind", "UX/UI", "Figma", "PHPUnit"],
+    list: ["Svelte", "React", "jQuery", "Docker"],
   },
   {
     name: "Novice",
     value: "novice",
-    list: ["Svelte", "Next", "Node", "CI/CD", "Docker"],
+    list: ["Node", "Angular", "Next", "Java", "C#", "Python", "Arduino", ".NET"],
   },
   {
-    name: "Notions",
+    name: "Outils",
     value: "notions",
-    list: ["Angular", "Java", "C#", ".NET", "GDscript"],
+    list: ["Git", "Tailwind", "PHPUnit", "Playwright", "Figma"],
   },
 ] as const;
 
@@ -53,7 +53,7 @@ export const experiences = [
     year: 2024,
     category: "work",
     name: "Guarani - Simpliciti",
-    description: "Ingénieur logiciel | VueJS - Symfony",
+    description: "Ingénieur logiciel | VueJS - Symfony - API Platform",
   },
   {
     year: 2023,
@@ -97,7 +97,7 @@ export const codeBlocks = [
   {
     className: "About",
     education: '"Ingénieur"',
-    hobbies: '["Code", "Volley-ball", "Musique", "Jeux"]'
+    hobbies: '["Code", "Volley-ball", "Musique", "Brassage"]'
   },
   {
     className: "Experiences",

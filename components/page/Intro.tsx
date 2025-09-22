@@ -45,11 +45,11 @@ export default function Intro() {
           <span>Je m'appelle </span>
           <span className="font-bold">Robin</span>
           <span>. Je suis </span>
-          <span className="font-bold">développeur fullstack </span>
+          <span className="font-bold">ingénieur logiciel </span>
           <span>depuis </span>
           <span className="font-bold">{ new Date().getFullYear() - 2020 } ans</span>.
           <br /><br />
-          Mes domaines de prédilection sont <span className="font-bold">PHP (Laravel)</span> et <span className="font-bold">Javascript (React.js)</span>.
+          Mes domaines de prédilection sont <span className="font-bold">PHP (Laravel, Symfony)</span> et <span className="font-bold">Javascript (Vue, Svelte, React)</span>.
         </div>
         <CodeWrapper
           width="25rem"
@@ -69,7 +69,7 @@ export default function Intro() {
         animate={{ y: 0, opacity: 1 }}>
         <div className="flex gap-6 my-1 sm:my-0 m:gap-6">
           <LinkButton href="#contact" backgroundColor='bg-[#A8C9A0]' content="Me contacter" />
-          <LinkButton href="/files/CV-2024.pdf" backgroundColor='bg-[#ECB5A3]' hoverBackgroundColor='hover:bg-[#C48976]' download content="Télécharger mon CV" />
+          <LinkButton href="/files/CV.pdf" backgroundColor='bg-[#ECB5A3]' hoverBackgroundColor='hover:bg-[#C48976]' download content="Télécharger mon CV" />
         </div>
 
         <div className="flex gap-4 my-1 sm:my-0 sm:gap-6">
