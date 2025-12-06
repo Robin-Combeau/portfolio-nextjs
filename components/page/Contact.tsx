@@ -59,17 +59,17 @@ export default function Contact() {
             bgColor="bg-[#ECB5A3]"
             content={
               <form
-              className="flex flex-col text-base"
-              action={(formData) =>{
-                const {data, error} = sendEmail(formData);
-                if(error){
-                  toast.error("Il y a eu une erreur : " + error);
-                  return;
-                }
-                toast.success("Mail envoyé !", {
-                  duration: 5000
-                });
-              }}
+                className="flex flex-col text-base"
+                action={async (formData) => {
+                  const { data, error } = await sendEmail(formData);
+                  if (error) {
+                    toast.error("Il y a eu une erreur : " + error);
+                    return;
+                  }
+                  toast.success("Mail envoyé !", {
+                    duration: 5000
+                  });
+                }}
               >
                 <input
                   className="h-14 border-2 border-[#161716] bg-[#EAF0EA] border-b-[6px] px-5 py-3 rounded-xl my-2 focus:outline-none"
