@@ -1,5 +1,4 @@
 "use server"
-
 import { Resend } from "resend";
 import { getErrorMessage, validateString } from "@/lib/utils";
 import React from "react";
@@ -7,7 +6,7 @@ import ContactFormMail from "@/lib/contact-form-mail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = (formData: FormData) => {
+export const sendEmail = async (formData: FormData) => {
   console.log("server");
 
   const email = formData.get("email");
@@ -25,8 +24,8 @@ export const sendEmail = (formData: FormData) => {
   }
 
   let data;
-  try{
-    data = resend.emails.send({
+  try {
+    data = await resend.emails.send({
       from: 'Message du portfolio <onboarding@resend.dev>',
       to: 'robin.combeau@gmail.com',
       subject: 'Message de robincombeau.work',
@@ -36,14 +35,13 @@ export const sendEmail = (formData: FormData) => {
         email: email,
       }),
     });
-  }
-  catch(error: any){
+  } catch (error: any) {
     return {
       error: getErrorMessage(error),
-    }
+    };
   }
 
   return {
     data
-  }
+  };
 };
