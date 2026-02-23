@@ -21,7 +21,7 @@ export default function Projects() {
       setActiveSection("Projets");
     }
   }, [inView, setActiveSection]);
-  
+
   return (
     <MotionSection
       id="projects"
@@ -39,13 +39,17 @@ export default function Projects() {
                 <div className="border-2 border-[#161716] border-b-[6px] w-full lg:w-[46%] h-auto lg:h-[14rem] mb-4 lg:mr-5 bg-[#EAF0EA] p-4 px-6 rounded-xl flex flex-col lg:flex-row relative overflow-hidden">
                   <div className="lg:w-[auto] relative z-10">
                     <div className="flex items-center mb-2">
-                      <h2 className="font-bold mb-2 mr-2 text-xl">Hearthdle</h2>
-                      <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="https://github.com/Robin-Combeau/hearthdle-proje" target="_blank">
-                        <FaGithub size={24} className='' />
+                      <h2 className="font-bold mb-2 mr-2 text-xl">Hearthstone guessing game</h2>
+                      <a className="text-[#161716] mx-1 mb-[8px] pointer-events-none opacity-50"
+                        href="https://github.com/Robin-Combeau/hearth***"
+                        target="_blank"
+                        onClick={(e) => e.preventDefault()}
+                      >
+                        <FaGithub size={24} />
                       </a>
-                      {/*                     <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="http://github.com" target="_blank">
-                      <FiExternalLink size={24} className='' />
-                    </a> */}
+                      {/* <a className="text-[#161716] hover:text-[#ECB5A3] mx-1 mb-[8px]" href="http://github.com" target="_blank">
+                        <FiExternalLink size={24} className='' />
+                      </a> */}
                     </div>
 
                     <div className="flex flex-col text-sm break-words">
