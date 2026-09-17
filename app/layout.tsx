@@ -85,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className="!scroll-smooth">
       <head>
-        <script defer src="https://stats.robincombeau.work/script.js" data-website-id="2443589d-32c4-4c44-b45f-36c8c6a7ec7d"></script>
+        <script defer src="https://stats.robincombeau.work/script.js" data-website-id="b8f903e8-01e6-4057-8005-26561785b341"></script>
       </head>
       <body suppressHydrationWarning={true} className={`${avenir.className} font-medium text-[#161716] tracking-[-0.03rem] bg-[#EAF0EA] pt-28 sm:pt-30 lg:pt-36` }>
         <ActiveSectionContextProvider>
